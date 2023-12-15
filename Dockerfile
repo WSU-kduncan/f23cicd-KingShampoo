@@ -1,9 +1,6 @@
 # Use Nginx as the base image
 FROM nginx:alpine
 
-# Set the working directory to Nginx's serve directory
-WORKDIR /usr/share/nginx/html
-
 # Install git, clone the repository, copy the specific folder, remove the rest
 
 RUN apk add --no-cache git && \

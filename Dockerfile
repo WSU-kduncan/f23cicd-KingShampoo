@@ -1,8 +1,19 @@
-# Container image that runs your code
-FROM alpine:3.10
+# Use Nginx as the base image
+FROM nginx:alpine
 
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
+# Set the working directory to Nginx's serve directory
+WORKDIR /usr/share/nginx/html
 
-# Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/entrypoint.sh"]
+# Install git, clone the repository, copy the specific folder, remove the rest
+
+RUN apk add --no-cache git && \
+    git clone https://github.com/WSU-kduncan/f23cicd-KingShampoo.git /tmp/repo && \
+    cp -r /tmp/repo/website/* . && \
+    rm -rf /tmp/repo && \
+    apk del git
+
+# Expose port 80
+EXPOSE 80
+
+# Start Nginx and keep it running
+CMD ["nginx", "-g", "daemon off;"]

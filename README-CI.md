@@ -90,7 +90,7 @@ You can view the repository at: `https://hub.docker.com/r/koolnoob/project4`
 - `your-image-name`: The name of your Docker image as it will appear in DockerHub.
 
 ### Adaptability
-- If others use this workflow or if you reuse it, ensure to change the DockerHub username, repository name, and Docker image name to reflect the new context.
+- If others use this workflow or if you reuse it, ensure to change the DockerHub username, repository name, and Docker image name to reflect the new context
 
 
 

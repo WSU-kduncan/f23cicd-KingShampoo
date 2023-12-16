@@ -46,4 +46,4 @@ i used dockerhub to message the listener, super easy since all i do is go to doc
   
   ![Alt text](image-5.png)
   
-uhhhhhhhhhhhhhhhhhhhhhhhhhh ill try and get this video posted on this but im having issues uploading my video, ill try yt soon if this keeps not working. 
+

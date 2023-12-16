@@ -31,7 +31,7 @@ setting up webhook on the server was a bit of a pain and i think this is where i
     
     'cd webhooks'
     
-    and made hook.json and pull-restart.sh using vim, both of these files are in my deployment folder
+and made hook.json and pull-restart.sh using vim, both of these files are in my deployment folder
 
   ![Alt text](image-3.png)
 

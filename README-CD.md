@@ -14,6 +14,8 @@
 
   So to install docker on my instance its rather easy, i did it with a 'sudo yum install docker -y' which installs docker and we can check to make sure its running with a 'sudo service docker start' and 'docker run hello-world'
 
+![Alt text](image-1.png)
+![Alt text](image-2.png)
   once docker is verified as working we can 'sudo docker pull koolnoob/f23cicd-kingshampoo:main' to get our docker repo pulled and get the current version we have out. 
 'sudo docker run -i -t {image id} /bin/bash' to run 
 
@@ -26,9 +28,13 @@
     'mkdir webhooks'
     'cd webhooks'
     and made hook.json and pull-restart.sh using vim, both of these files are in my deployment folder
-  
+
+  ![Alt text](image-3.png)
+
     my hook file has an id of restart containters, then signals to run my pull-restart file and then specifies /var/webhook as our working dir. 
 
     i used dockerhub to message the listener, super easy since all i do is go to dockerhub repo, webhooks, new and name it (project5) and give it a url (http://54.234.87.12:9000/hook/webhook)
+  
+  ![Alt text](image-4.png)
   
     uhhhhhhhhhhhhhhhhhhhhhhhhhh ill try and get this video posted on this but im having issues uploading my video, ill try yt soon if this keeps not working. 

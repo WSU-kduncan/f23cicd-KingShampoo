@@ -16,13 +16,13 @@
 
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
+
   once docker is verified as working we can 'sudo docker pull koolnoob/f23cicd-kingshampoo:main' to get our docker repo pulled and get the current version we have out. 
-'sudo docker run -i -t {image id} /bin/bash' to run 
+'sudo docker run -i -t {image id} /bin/bash' to run
 
-    my container restart script is called pull-restart.sh and its located in the home dir, this is because im lazy and not the normal location which would be in a secure folder with tighter perms like the etc folder. this script kills + removes the current running website and image, pulls the new one, and then runs the new one.
+   my container restart script is called pull-restart.sh and its located in the home dir, this is because im lazy and not the normal location which would be in a secure folder with tighter perms like the etc folder. this script kills + removes the current running website and image, pulls the new one, and then runs the new one.
 
-    setting up webhook on the server was a bit of a pain and i think this is where i was messing up
-    to install i tried 
+setting up webhook on the server was a bit of a pain and i think this is where i was messing up to install i tried:
     'curl -L https://github.com/adnanh/webhook/releases/download/2.8.1/webhook-linux-amd64.tar.gz -o webhook-linux-amd64.tar.gz' 
     'tar -xzvf webhook-linux-amd64.tar.gz'
     'mkdir webhooks'
@@ -31,10 +31,10 @@
 
   ![Alt text](image-3.png)
 
-    my hook file has an id of restart containters, then signals to run my pull-restart file and then specifies /var/webhook as our working dir. 
+my hook file has an id of restart containters, then signals to run my pull-restart file and then specifies /var/webhook as our working dir. 
 
-    i used dockerhub to message the listener, super easy since all i do is go to dockerhub repo, webhooks, new and name it (project5) and give it a url (http://54.234.87.12:9000/hook/webhook)
+i used dockerhub to message the listener, super easy since all i do is go to dockerhub repo, webhooks, new and name it (project5) and give it a url (http://54.234.87.12:9000/hook/webhook)
   
   ![Alt text](image-4.png)
   
-    uhhhhhhhhhhhhhhhhhhhhhhhhhh ill try and get this video posted on this but im having issues uploading my video, ill try yt soon if this keeps not working. 
+uhhhhhhhhhhhhhhhhhhhhhhhhhh ill try and get this video posted on this but im having issues uploading my video, ill try yt soon if this keeps not working. 

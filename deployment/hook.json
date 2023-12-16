@@ -1,0 +1,7 @@
+#! /bin/bash
+# kill and remove container
+docker kill 
+docker remove 
+# once dead and remove, remove reference
+docker image rm 
+sudo docker run -d -p 80:80 --name

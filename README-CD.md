@@ -23,10 +23,14 @@
    my container restart script is called pull-restart.sh and its located in the home dir, this is because im lazy and not the normal location which would be in a secure folder with tighter perms like the etc folder. this script kills + removes the current running website and image, pulls the new one, and then runs the new one.
 
 setting up webhook on the server was a bit of a pain and i think this is where i was messing up to install i tried:
+    
     'curl -L https://github.com/adnanh/webhook/releases/download/2.8.1/webhook-linux-amd64.tar.gz -o webhook-linux-amd64.tar.gz' 
+    
     'tar -xzvf webhook-linux-amd64.tar.gz'
     'mkdir webhooks'
+    
     'cd webhooks'
+    
     and made hook.json and pull-restart.sh using vim, both of these files are in my deployment folder
 
   ![Alt text](image-3.png)

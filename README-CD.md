@@ -7,6 +7,9 @@
     the easy way to tag something it when you are doing your git add, git commit, then do a 'git tag -a v1.blah'
   you can use a 'git show' to check your tag.
   then do a 'git push origin v1.blah' to push your tagged commit
+
+  This workflow automates the process of building and pushing a docker image to docker hub anytime a push pull or tag is done to the main repo. This work flow makes sure the images are versioned and labeled appropriately for ezpz continuous deployment.
+
   [Docker repo](https://hub.docker.com/repository/docker/koolnoob/f23cicd-kingshampoo/general)
 
 # part 2
